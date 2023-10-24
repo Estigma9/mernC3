@@ -32,7 +32,7 @@ function OurResults() {
                 <section className="results-text">
                     <h4>Lorem ipsum dolor sit amet.</h4>
                     <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Officiis, natus.</p>
-                    <a href=''>Ingrese aquí</a>
+                    <a href='{}'>Ingrese aquí</a>
                 </section>
             </div>
         </section>

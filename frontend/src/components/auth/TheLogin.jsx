@@ -11,7 +11,7 @@ import baseURL from'../../api/index.js'
 const baseUrl = baseURL;
 
 const TheLogin = () => {
-  const [isAuthenticated, setIsAuthenticated] = useState(false);
+  // const [isAuthenticated, setIsAuthenticated] = useState(false);
 
   const [currentTab, setToggleState] = useState(1);
   
@@ -22,12 +22,12 @@ const TheLogin = () => {
   const [dataUser, setData] = useState({
     email: "",
     password: "",
-    
+ 
   });
 
   const handleChange = (event) =>{
-    // console.log(event.target.name)
-    // console.log(event.target.value)
+    console.log(event.target.name)
+    console.log(event.target.value)
 
     setData({
       ...dataUser,
@@ -47,7 +47,6 @@ const TheLogin = () => {
   //     console.log('Form submitted!!! XD o+<]: ');
   // }
 
-
   const navigate = useNavigate();
 
   const loginUser = async () =>{
@@ -55,7 +54,6 @@ const TheLogin = () => {
       //console.log('Estoy intentando !!');
       let response = await axios.post(baseUrl + "/api/user/login", dataUser);
       
-      //console.log('Ya pregunté');
       console.log(response.data);
 
       let token = response.data.tokenReturn;      
@@ -67,7 +65,7 @@ const TheLogin = () => {
       if (token) {
         swal("Éxito!!", "Login correcto", "success");
         navigate('/checked');
-        setIsAuthenticated(true);
+        // setIsAuthenticated(true);
       }
     } catch (e) {
       swal("Oops!", "Algo salió mal!", "error");
@@ -86,7 +84,6 @@ const TheLogin = () => {
       swal("Oops!", "Algo salió mal con tu registro!", "error");
     }
   }
-
 
   return (
     <div className="the-login">

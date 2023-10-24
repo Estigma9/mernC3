@@ -52,13 +52,13 @@ function MainNavbar(){
   return (
     <header>
       <nav>
-        <section class="contenedor nav">
-          <div class="logo">
+        <section className="contenedor nav">
+          <div className="logo">
             <Link to="/">
                 <img src={logoEstigma} alt="logo"/>
             </Link>
           </div>
-          <div class="enlaces-header">
+          <div className="enlaces-header">
             <Link className="anch" to="/">Home</Link>
             <Link className="anch" to="/about">About</Link>
             <Link className="anch" to="/services">Services</Link>
@@ -69,8 +69,9 @@ function MainNavbar(){
               <button onClick={onLogout}>Cerrar Sesión</button>
             ) : null} */}
           </div>
-          <div class="hamburguer">
-              <i class="fa-solid fa-bars"></i>
+          
+          <div className="hamburguer">
+            <i className="bi bi-list"></i>
           </div>
         </section>
       </nav>

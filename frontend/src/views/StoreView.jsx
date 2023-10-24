@@ -1,11 +1,11 @@
 import StoreCarousel from '../components/StoreCarousel';
-// import TheFooter from '../components/TheFooter';
+import TheFooter from '../components/TheFooter';
 
 function StoreView () {
     return (
         <div>           
             <StoreCarousel/>
-            {/* <TheFooter></TheFooter> */}
+            <TheFooter></TheFooter>
         </div>
     );
 };

@@ -14,7 +14,7 @@ function MyIntro() {
                 <img src={firstImg} alt="software engineer"
                 />
             </section>
-        </div>   
+        </div> 
     );
 };
 

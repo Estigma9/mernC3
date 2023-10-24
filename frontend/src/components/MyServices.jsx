@@ -5,8 +5,11 @@ import 'aos/dist/aos.css';
 import '../styles/MyServices.css';
 
 
+
 function MyServices() {
-    AOS.init();
+    AOS.init({
+        duration: 3000,
+    });
     return (
         <div id="services">
         <section className="about-us">
@@ -24,7 +27,7 @@ function MyServices() {
         
                     <div className="articulo" data-aos="zoom-in-right" >
                         <div className='icon-container'>
-                        <i className="bi bi-code-slash"></i>
+                            <i className="bi bi-code-slash b-icon"></i>
                             {/* <Code className="b-icon"/> */}
                         </div>
                         <h3>Web design</h3>

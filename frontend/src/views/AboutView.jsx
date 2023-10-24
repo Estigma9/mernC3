@@ -1,7 +1,7 @@
 import OurHistory from '../components/OurHistory';
 import OurResults from '../components/OurResults';
 import OurSuccess from '../components/OurSuccess';
-// import TheFooter from '../components/TheFooter';
+import TheFooter from '../components/TheFooter';
 
 function AboutView () {
     return (
@@ -9,7 +9,7 @@ function AboutView () {
             <OurHistory></OurHistory>
             <OurResults></OurResults>
             <OurSuccess></OurSuccess>
-            {/* <TheFooter></TheFooter> */}
+            <TheFooter></TheFooter>
         </div>
     );
 };
