@@ -1,0 +1,47 @@
+/* @import '../index.css';
+@import '../App.css';
+
+:root{
+--dark-blue: #1d273b;
+--middle-blue: #2570ff;
+--light-blue: #5D6678;
+--purple-blue: #667db6;
+--gray:#adb6c7;
+--light-green: #1FDE82;
+--white: #fff;
+--light-gray: #f2f2f2;
+--white-gray: #f2f5fc;
+} */
+  
+
+.services{
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+}
+
+.services>img{
+    width: 500px;
+}
+
+.box-skills{
+    margin: 30px 30px 0 0;
+    
+}
+
+.box-skills h4{
+    font-size: 24px;
+    background: var(--light-gray);
+    width: 350px;
+    border-radius: 6px;
+    padding: 10px 0 10px 30px;
+    margin-bottom: 10px; 
+    text-align: left; 
+
+}
+
+.box-skills i{
+    color: var(--light-green);
+    font-size: 30px;
+     
+}

@@ -1,0 +1,67 @@
+
+header::before {
+    content: "";
+    display: block;
+    margin-bottom: 80px;
+    /*Esto es para que cuando el nav que esta fixed no se superponga a elementos, tambien el top y z-index del nav*/
+}
+
+nav {
+    width: 100%;
+    height: 100px;
+    background: var(--white);
+    border-bottom: 1px solid transparent;
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, .2);
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    transition: ease-in-out 0.5s;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.nav .logo {
+    height: 100px;
+}
+
+.nav .logo img {
+    height: 100%;
+    vertical-align: top;
+    cursor: pointer;
+}
+
+.enlaces-header {
+    font-weight: 300;
+    transition: ease-in-out 0.5s;
+}
+
+.nav .enlaces-header .anch {
+    color: var(--light-blue);
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+.hamburguer {
+    width: 80px;
+    height: 80px;
+    display: none;
+    /* background: #236363; */
+    text-align: center;
+    z-index: 100;
+    cursor: pointer;
+    transition: color 0.5s ease-in;
+}
+
+.hamburguer>i {
+    font-size: 25px;
+    line-height: 80px;
+}
+
+
