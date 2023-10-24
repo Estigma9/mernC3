@@ -30,15 +30,7 @@ function App() {
 
           <Route path="/checked" element={<CheckedView />} />
 
-          {/* <Route element={<RequireAuth allowedRoles={[ROLES.User]} />}>
-            <Route path="/checked" element = {<CheckedView/>} />
-          </Route> */}
-
-
-
           <Route path="*" element={<Navigate replace to="/" />} />
-          {/* <Route path="unauthorized" element={<Unauthorized />} /> */}
-
 
         </Routes>
       </Router>
