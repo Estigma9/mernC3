@@ -6,13 +6,14 @@ import swal from 'sweetalert';
 
 import '../../styles/TheLogin.css';
 import baseURL from'../../api/index.js'
+import { useAuth } from '../../hooks/AuthContext';
 
 //const baseUrl = "http://localhost:4000";
 const baseUrl = baseURL;
 
 const TheLogin = () => {
-  // const [isAuthenticated, setIsAuthenticated] = useState(false);
-
+  const {isLoggedIn, login, logout} = useAuth();
+  
   const [currentTab, setToggleState] = useState(1);
   
   function selectTab(index) {
@@ -42,16 +43,10 @@ const TheLogin = () => {
     console.log('Form submitted!!! XD o+<]: ');
   }
 
-  // function handleSubmit2 (ev){
-  //     ev.preventDefault();
-  //     console.log('Form submitted!!! XD o+<]: ');
-  // }
-
   const navigate = useNavigate();
 
   const loginUser = async () =>{
     try {
-      //console.log('Estoy intentando !!');
       let response = await axios.post(baseUrl + "/api/user/login", dataUser);
       
       console.log(response.data);
@@ -65,7 +60,7 @@ const TheLogin = () => {
       if (token) {
         swal("Éxito!!", "Login correcto", "success");
         navigate('/checked');
-        // setIsAuthenticated(true);
+        login();
       }
     } catch (e) {
       swal("Oops!", "Algo salió mal!", "error");
@@ -79,6 +74,7 @@ const TheLogin = () => {
       console.log(response);
       swal("Éxito!!", "Registro correcto", "success");
       navigate('/login');
+      setToggleState(1);
       
     } catch (e) {
       swal("Oops!", "Algo salió mal con tu registro!", "error");
@@ -220,11 +216,6 @@ const TheLogin = () => {
               </form>
           </div>
         </div>
-
-        <pre>
-          {/* {{login}}
-          {{register}}             */}
-        </pre>
       </div>
     </div>  
   );

@@ -48,6 +48,10 @@ nav {
     margin-left: 20px;
 }
 
+.nav .enlaces-header .logout {
+    margin-left: 20px;
+}
+
 .hamburguer {
     width: 80px;
     height: 80px;
@@ -64,4 +68,20 @@ nav {
     line-height: 80px;
 }
 
+.logout {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #1FDE82;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(31, 222, 130, .46);
+
+}
 

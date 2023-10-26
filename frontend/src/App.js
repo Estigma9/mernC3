@@ -1,5 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from "react-router-dom";
+import { useAuth } from './hooks/AuthContext';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css'
 
@@ -17,6 +18,8 @@ import './App.css';
 
 
 function App() {
+  const { isLoggedIn } = useAuth();
+
   return (
     <div className="App">
       <Router>
@@ -28,7 +31,7 @@ function App() {
           <Route path="/store" element={<StoreView />} />
           <Route path="/login" element={<LoginView />} />
 
-          <Route path="/checked" element={<CheckedView />} />
+          <Route path="/checked" element={isLoggedIn ? <CheckedView /> : <Navigate to="/"/>} />
 
           <Route path="*" element={<Navigate replace to="/" />} />
 

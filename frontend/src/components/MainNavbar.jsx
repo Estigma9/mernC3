@@ -44,11 +44,15 @@
 
 //--------------- Nav opcional ---------------//
 import {Link} from "react-router-dom";
+import { useAuth } from "../hooks/AuthContext";
+
 import '../styles/MainNavbar.css';
 import logoEstigma from'../assets/logoEstigma.png'
 
 
 function MainNavbar(){
+  const { isLoggedIn, logout } = useAuth();
+
   return (
     <header>
       <nav>
@@ -65,9 +69,8 @@ function MainNavbar(){
             <Link className="anch" to="/store">Store</Link>
             <Link className="anch" to="/login">Login</Link>
 
-            {/* {isAuthenticated ? (
-              <button onClick={onLogout}>Cerrar Sesión</button>
-            ) : null} */}
+            {isLoggedIn && <button className="logout" onClick={logout}>LogOut</button>}
+            
           </div>
           
           <div className="hamburguer">
