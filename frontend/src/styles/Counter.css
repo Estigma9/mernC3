@@ -1,0 +1,32 @@
+.counter-content{
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+
+.counter-content > p{
+    background-color: aquamarine;
+    font-size: 50px;
+    font-weight: bold;
+    color: black;
+}
+
+
+.counter-content > .counter {
+    margin: 28px 0 0 0;
+    width: 130px;
+    display: inline-block;
+    background: #1FDE82;
+    text-align: center;
+    color: #fff;
+    padding: 12px 0;
+    text-decoration: none;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 0 8px 32px rgba(31, 222, 130, .46);
+
+}
