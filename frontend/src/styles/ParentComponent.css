@@ -1,0 +1,14 @@
+.parent-content{
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+}
+
+.parent-content > p{
+    color: black;
+    border-color: black;
+    
+}
